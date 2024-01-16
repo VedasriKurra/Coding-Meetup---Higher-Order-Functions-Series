@@ -24,6 +24,7 @@ your function should return the following object (the order of properties does n
 '''
 
 
+
 def order_food(lst): 
     # your code here
     standard=0
@@ -34,18 +35,17 @@ def order_food(lst):
     i=0
     result={}
     new_dict={}
-    while(i<len(lst)):
-        if(lst[i]['meal']=='standard'):
+    for i in lst:
+        if(i['meal']=='standard'):
             standard=standard+1
-        elif(lst[i]['meal']=='vegetarian'):
+        elif(i['meal']=='vegetarian'):
             vegetarian=vegetarian+1
-        elif(lst[i]['meal']=='vegan'):
+        elif(i['meal']=='vegan'):
             vegan=vegan+1
-        elif(lst[i]['meal']=='diabetic'):
+        elif(i['meal']=='diabetic'):
             diabetic=diabetic+1
         else:
             glutenintolerant=glutenintolerant+1
-        i=i+1
         
     result={'standard':standard,'vegetarian':vegetarian,'vegan':vegan,'diabetic':diabetic,'gluten-intolerant':glutenintolerant}
     for key,value in result.items():
